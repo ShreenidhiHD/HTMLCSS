@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Input Animation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+  .input-group {
+    position: relative;
+  }
+  .input {
+    padding: 10px; border: none;
+    border-radius: 4px;
+    font: inherit;
+    color: #fff;
+    background-color: transparent;
+    outline: 2px solid #fff;
+  }
+ .input-label {
+   position: absolute;
+   top: 0;
+   Left: 0;
+   transform: translate(10px, 10px);
+   transition: transform .25s;
+ }
+.input:focus+.input-label, .input:valid.input-label { 
+  transform:
+  translate(10px, -10px) scale(.8);
+  color: #dic5fc;)
+  padding-inline: 5px; 
+  background-color: white;
+ }
+.input:is(:focus, :valid) { 
+  outline-color: #d1c5fc;
+ }
+ </style>
+<body>
+  <div class="input-group">
+    <input type="text" id="name" class="input">
+    <label for="name" class="input-label">user</label>
+  </div>
+</body>
+</html>
